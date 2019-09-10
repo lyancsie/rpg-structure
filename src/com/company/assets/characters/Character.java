@@ -1,12 +1,12 @@
 package com.company.assets.characters;
 
 import com.company.assets.GameObject;
+import com.company.assets.enums.ElementType;
 import com.company.assets.enums.Status;
 
-import java.util.HashMap;
-
 //TODO: It could be a Character<T extends Element>
-public abstract class Character extends GameObject {
+//Do we need that GameObject? Possibly not
+public abstract class Character<T extends ElementType> extends GameObject {
 
   private Immunities immunities;
   private Status status;
