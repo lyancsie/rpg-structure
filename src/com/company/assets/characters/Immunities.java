@@ -13,11 +13,6 @@ import java.util.Set;
 //some exception handling needed because all statuses need to be there once*/
 public class Immunities extends HashMap<ElementType, Integer> {
 
-  void initialize() {
-
-
-  }
-
   public Immunities(Map<? extends ElementType, ? extends Integer> m) {
     this.putAll(m);
   }

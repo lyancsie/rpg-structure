@@ -9,6 +9,7 @@ import com.company.assets.enums.ElementType;
 import java.io.IOException;
 import java.util.HashMap;
 
+//TODO: import maven / gradle
 public class Main {
   public static void main(String[] args) {
 
@@ -29,8 +30,6 @@ public class Main {
     ElementType elementType = ElementType.FIRE;
     Mage<ElementType> mage = new Mage<ElementType>(() -> ElementType.FIRE);
     Mage<ElementType> mage2 = new Mage<ElementType>(() -> ElementType.ICE);
-    ElementType elementType1 = ElementType.FIRE;
-    Mage mage3 = new Mage(elementType1);
 
   }
 }
