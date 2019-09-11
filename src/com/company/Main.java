@@ -9,7 +9,7 @@ public class Main {
     Mage<ElementType> mage = new Mage<ElementType>(() -> ElementType.FIRE);
     Mage<ElementType> mage2 = new Mage<ElementType>(() -> ElementType.ICE);
     ElementType elementType1 = ElementType.FIRE;
-    Mage mage3 = new Mage(elementType1);
 
+    
   }
 }
