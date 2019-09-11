@@ -6,8 +6,9 @@ import com.company.assets.enums.Status;
 
 //TODO: It could be a Character<T extends Element>
 //Do we need that GameObject? Possibly not
-public abstract class Character<T extends ElementType> extends GameObject {
+public abstract class Character<T extends ElementType> implements GameObject {
 
+  T t;
   private Immunities immunities;
   private Status status;
   public Status getStatus() {
