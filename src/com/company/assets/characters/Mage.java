@@ -6,13 +6,8 @@ import java.util.function.Supplier;
 
 public class Mage<T extends ElementType> extends Monster implements Moving, Teleporting {
 
-    //TODO: implement it into the factory
-    public Mage(Supplier<T> supplier) {
-        T t = supplier.get();
-        if (t.equals(ElementType.FIRE)) {
-
-        }
-        if (t.equals(ElementType.ICE)) {
-        }
+    public Mage(Supplier supplier) {
+        super(supplier);
     }
 }
+

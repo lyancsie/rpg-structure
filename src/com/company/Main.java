@@ -10,6 +10,6 @@ public class Main {
     Mage<ElementType> mage2 = new Mage<ElementType>(() -> ElementType.ICE);
     ElementType elementType1 = ElementType.FIRE;
 
-    
+
   }
 }
