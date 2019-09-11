@@ -5,6 +5,9 @@ import com.company.assets.enums.ElementType;
 import java.util.function.Supplier;
 
 public class Mage<T extends ElementType> extends Monster implements Moving, Teleporting {
+    public Mage(T t) {
+
+    }
 
     //TODO: implement it into the factory
     public Mage(Supplier<T> supplier) {
@@ -13,7 +16,6 @@ public class Mage<T extends ElementType> extends Monster implements Moving, Tele
 
         }
         if (t.equals(ElementType.ICE)) {
-
         }
     }
 }
