@@ -8,6 +8,10 @@ public class Hero extends Character implements Moving {
   HeroType heroType;
   Weapon weapon;
 
+  public Hero(Immunities immunities, int HP) {
+    super(immunities, HP);
+  }
+
   public void setWeapon(Weapon weapon){
     this.weapon = weapon;
   }

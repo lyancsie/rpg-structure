@@ -4,7 +4,7 @@ import java.util.function.Supplier;
 
 public class BasicMonster extends Monster {
 
-  public BasicMonster(Supplier supplier) {
-    super(supplier);
+  public BasicMonster(Immunities immunities, int HP) {
+    super(immunities, HP);
   }
 }

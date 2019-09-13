@@ -6,7 +6,7 @@ import java.util.function.Supplier;
 
 public abstract class Monster<T extends ElementType> extends Character{
 
-  public Monster(Supplier<T> supplier) {
-    t = supplier.get();
+  public Monster(Immunities immunities, int HP) {
+    super(immunities, HP);
   }
 }
