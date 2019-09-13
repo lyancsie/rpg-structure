@@ -11,3 +11,4 @@ public class Mage<T extends ElementType> extends Monster implements Moving, Tele
     }
 
 }
+

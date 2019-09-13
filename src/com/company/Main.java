@@ -10,7 +10,6 @@ import com.company.assets.weapons.Mace;
 
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.concurrent.atomic.AtomicReference;
 
 //TODO: import maven / gradle
 public class Main {

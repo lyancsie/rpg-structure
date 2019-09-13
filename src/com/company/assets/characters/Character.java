@@ -4,6 +4,8 @@ import com.company.assets.GameObject;
 import com.company.assets.enums.ElementType;
 import com.company.assets.enums.Status;
 
+import java.util.function.Supplier;
+
 //TODO: It could be a Character<T extends Element>
 public abstract class Character<T extends ElementType> implements GameObject {
 
