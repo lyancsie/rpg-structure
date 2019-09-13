@@ -4,27 +4,33 @@ import com.company.assets.GameObject;
 import com.company.assets.enums.ElementType;
 import com.company.assets.enums.Status;
 
-import java.util.function.Supplier;
+public abstract class Character implements GameObject {
 
-//TODO: It could be a Character<T extends Element>
-public abstract class Character<T extends ElementType> implements GameObject {
-
-  private T t;
+  private ElementType elementType;
   private Immunities immunities;
   private Status status;
+  private String name;
   private int HP;
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
 
   public Character(Immunities immunities, int HP) {
     this.immunities = immunities;
     this.HP = HP;
   }
 
-  public T getT() {
-    return t;
+  public ElementType getElementType() {
+    return elementType;
   }
 
-  public void setT(T t) {
-    this.t = t;
+  public void setElementType(ElementType elementType) {
+    this.elementType = elementType;
   }
 
   public Immunities getImmunities() {

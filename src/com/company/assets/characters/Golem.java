@@ -5,7 +5,7 @@ import com.company.assets.enums.ElementType;
 
 import java.util.function.Supplier;
 
-public class Golem<T extends ElementType> extends Monster implements GameObject, Moving {
+public class Golem extends Monster implements GameObject, Moving {
 
   public Golem(Immunities immunities, int HP) {
     super(immunities, HP);

@@ -6,7 +6,7 @@ import java.util.function.Supplier;
 
 public class Mace<T extends ElementType> extends Weapon {
 
-  public Mace(Supplier supplier, int damage) {
-    super(supplier, damage);
+  public Mace(ElementType elementType, int damage) {
+    super(elementType, damage);
   }
 }
