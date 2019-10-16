@@ -4,8 +4,6 @@ import com.company.assets.GameObject;
 import com.company.assets.characters.Character;
 import com.company.assets.enums.ElementType;
 
-import java.util.function.Supplier;
-
 //TODO: T has to extend some kind of element (Fire, Ice, "Nothing"? or etc)
 public abstract class Weapon implements GameObject {
   ElementType elementType;
