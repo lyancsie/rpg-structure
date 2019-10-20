@@ -15,8 +15,6 @@ public abstract class Weapon implements GameObject {
   }
 
   public void damage(Character character) {
-    System.out.println("character was damaged by " + (damage - (int) (character.getImmunities().get(elementType) / 100. * damage)));
-    System.out.println("the damage is:" + damage);
     System.out.println("The damage modifier is: " + (int) (character.getImmunities().get(elementType) / 100. * damage));
     character.setHP(character.getHP() - (damage - (int) (character.getImmunities().get(elementType) / 100. * damage)));
   }

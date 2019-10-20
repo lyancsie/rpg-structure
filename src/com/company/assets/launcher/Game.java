@@ -2,8 +2,11 @@ package com.company.assets.launcher;
 
 import com.company.assets.Board;
 import com.company.assets.Persistence;
+import com.company.assets.characters.Character;
 import com.company.assets.characters.Hero;
 import com.company.assets.characters.Immunities;
+import com.company.assets.characters.Observer;
+import com.company.assets.characters.PropertyChangedEventArgs;
 import com.company.assets.enums.Difficulty;
 import com.company.assets.enums.ElementType;
 import com.company.assets.weapons.Mace;
@@ -12,7 +15,7 @@ import java.io.IOException;
 import java.util.HashMap;
 
 //TODO: use some library to implement JSON toString();
-public class Game {
+public class Game implements Observer<com.company.assets.characters.Character> {
 
   //TODO: create model
   //TODO: two-player model? --> how?
@@ -80,9 +83,14 @@ public class Game {
 
     Mace mace = new Mace<>(ElementType.ICE, 15);
     Hero hero = new Hero(immunities, 200);
-
+    hero.subscribe(this);
     mace.damage(hero);
 
     System.out.println(hero.getHP());
+  }
+
+  @Override
+  public void handle(PropertyChangedEventArgs<Character> args) {
+    System.out.println("Character's " + args.propertyName + " has changed to " + args.newValue);
   }
 }

@@ -4,7 +4,9 @@ import com.company.assets.GameObject;
 import com.company.assets.enums.ElementType;
 import com.company.assets.enums.Status;
 
-public abstract class Character implements GameObject {
+import javax.print.DocFlavor;
+
+public abstract class Character extends Observable<Character> implements GameObject {
 
   private ElementType elementType;
   private Immunities immunities;
@@ -46,7 +48,11 @@ public abstract class Character implements GameObject {
   }
 
   public void setHP(int HP) {
+    if(this.HP == HP){
+      return;
+    }
     this.HP = HP;
+    this.propertyChanged(this, "HP", HP);
   }
 
   public Status getStatus() {
